@@ -31,18 +31,5 @@ public class ApplicationDaoImpl implements ApplicationDao {
         return null;
     }
 
-    public static Application getApplication(){
-        String sql = "select * from application";
-        Application application = null;
-        try {
-            application = queryRunner.query(sql,new BeanHandler<>(Application.class));
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return application;
-    }
-    public static void main(String[] args) {
-        Application application = ApplicationDaoImpl.getApplication();
-        System.out.println(application);
-    }
+    
 }
