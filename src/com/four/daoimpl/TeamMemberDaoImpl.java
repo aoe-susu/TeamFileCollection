@@ -83,10 +83,7 @@ public class TeamMemberDaoImpl implements TeamMemberDao {
         }
         return count;
     }
-    /**
-     * 添加成员
-     * 添加成功返回自动生成的id，添加失败返回-1
-     * */
+
     @Override
     public int addMember(TeamMember member) {
 
