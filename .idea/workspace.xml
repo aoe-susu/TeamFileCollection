@@ -1,7 +1,242 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:managerModule" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7225371-169b-445d-9b4e-359cdb155139" name="Default Changelist" comment="" />
+    <list default="true" id="b7225371-169b-445d-9b4e-359cdb155139" name="Default Changelist" comment="这是版本1.2">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/computer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/kindeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_01.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_02.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_03.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_04.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_05.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_06.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_07.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_08.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_09.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/emoticons/etc_36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/flash.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/image.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/media.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/plainpaste.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/remote_image.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/plugins/wordpaste.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/default.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/div.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/dl.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/ol.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/p.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/tinymce.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/tinymce.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/editor/skins/ul.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/filelist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/add.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/btnbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/btnbg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/btnbg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/buttonbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/c01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/c02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/c03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/cbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/clist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/close1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/diskbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/f01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/f02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/f03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/f04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/f05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/f06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/i09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/iadd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ibtnbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ico01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ico02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ico03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ico04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ico05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ico06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icon01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icon02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icon03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icon04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icon05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/icon06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/img15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/inputbg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/itabbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/itabbg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftico01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftico02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftico03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftico04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftline.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/leftmenubg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/lefttop.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/libg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/line.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/line1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/list.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/list1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/list2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginbg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginbg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginbg3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logininfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginlogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginpassword.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginsj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/loginuser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/msg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/navbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/next.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/pre.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/px.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/righttop.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/rlist.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/sun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/t01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/t02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/t03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/t04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/t05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/tbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/tcbg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/th.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ticon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/toolbg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/topbg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/topleft.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/topright.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ub1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/uew_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/uew_icon_hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/ulist.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/userbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/imglist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/imglist1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/imgtable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/PIE.htc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/cloud.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/format+zh_CN,default,corechart.I.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.ba-resize.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.gvChart-1.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.gvChart-1.0.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.idTabs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jsapi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/left.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/right.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/tools.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/top.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="35801552-98f2-4b67-8134-dd7f76be2bd3" name="Revert &quot;这是版本1.1&quot;" comment="Revert &quot;这是版本1.1&quot;&#10;&#10;This reverts commit 393c29d0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,10 +246,24 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Bo_sun &lt;2425761238@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -31,28 +280,37 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="40" />
-    <option name="y" value="24" />
-    <option name="width" value="1346" />
-    <option name="height" value="735" />
-  </component>
   <component name="ProjectId" id="1hU5Ev8nI8JUfmfvZmYpfg3Q63T" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599644167257" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.20305052" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Git\gitpropercy\TeamFile\web" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\java\TeamFileCollection\src" />
     </key>
@@ -91,70 +349,147 @@
       <workItem from="1599650082575" duration="12000" />
       <workItem from="1599728991939" duration="32000" />
       <workItem from="1600052723409" duration="940000" />
+      <workItem from="1600175160320" duration="579000" />
+      <workItem from="1600177013781" duration="6177000" />
     </task>
+    <task id="LOCAL-00001" summary="这是版本1.1">
+      <created>1600181595444</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600181595444</updated>
+    </task>
+    <task id="LOCAL-00002" summary="这是版本1.1">
+      <created>1600182519608</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600182519608</updated>
+    </task>
+    <task id="LOCAL-00003" summary="这是版本1.1">
+      <created>1600182671413</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600182671413</updated>
+    </task>
+    <task id="LOCAL-00004" summary="这是版本1.1">
+      <created>1600183105754</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600183105754</updated>
+    </task>
+    <task id="LOCAL-00005" summary="这是版本1.1">
+      <created>1600248038084</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600248038084</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="managerModule" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="这是版本1.1" />
+    <MESSAGE value="这是版本1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="这是版本1.2" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="62" key="#Inspections" timestamp="1600182283474">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="309" y="62" key="#Inspections/0.0.1366.768@0.0.1366.768" timestamp="1600182283474" />
+    <state x="225" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600247967634">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="225" y="77" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1600247967633" />
     <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1600052990702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600052990702" />
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="275" y="0" key="CommitChangelistDialog2" timestamp="1600181839287">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="275" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1600181839287" />
+    <state x="92" y="92" width="1182" height="584" key="DiffContextDialog" timestamp="1600181942510">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="92" y="92" width="1182" height="584" key="DiffContextDialog/0.0.1366.768@0.0.1366.768" timestamp="1600181942510" />
+    <state x="357" y="175" width="652" height="468" key="FileChooserDialogImpl" timestamp="1600179374433">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="357" y="175" width="652" height="468" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1600179374433" />
+    <state width="660" height="235" key="GridCell.Tab.0.bottom" timestamp="1600181711592">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="660" height="235" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1600181711592" />
     <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="660" height="235" key="GridCell.Tab.0.center" timestamp="1600181711592">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="660" height="235" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1600181711592" />
     <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="660" height="235" key="GridCell.Tab.0.left" timestamp="1600181711592">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="660" height="235" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1600181711592" />
     <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="660" height="235" key="GridCell.Tab.0.right" timestamp="1600181711592">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state width="660" height="235" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1600181711592" />
     <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.20305052" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="129" y="59" key="MergeDialog" timestamp="1600247181376">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="129" y="59" key="MergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1600247181376" />
+    <state x="437" y="120" key="RollbackChangesDialog" timestamp="1600177863434">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="437" y="120" key="RollbackChangesDialog/0.0.1366.768@0.0.1366.768" timestamp="1600177863434" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1600182064132">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1600182064132" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1600248362454">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1600248362454" />
+    <state x="476" y="297" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600182739101">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="476" y="297" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1600182739101" />
+    <state x="443" y="96" key="git4idea.branch.GitSmartOperationDialog" timestamp="1600247171652">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="443" y="96" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.768@0.0.1366.768" timestamp="1600247171652" />
   </component>
 </project>
