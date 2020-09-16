@@ -6,6 +6,13 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="TeamFileCollection" />
+          <element id="library" level="project" name="js" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-dbcp-1.4" />
+          <element id="library" level="project" name="junit-4.12" />
+          <element id="library" level="project" name="hamcrest-2.2" />
+          <element id="library" level="project" name="jstl-1.2" />
         </element>
       </element>
     </root>

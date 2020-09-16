@@ -20,5 +20,10 @@ public interface TeamDao {
 
     public int modefyPasswordById(int id, String password);//通过id修改密码
 
-    public int modefyBaseInfoById(int id, Team team);//只会修改名称 简介 以及 图标地址
+    public int modefyNameById(int id, String Name);//通过id修改名称
+
+    public int modefyIntroductionById(int id, String introduction);//通过id修改简介
+
+    public int modefyIconUrlById(int id, String iconUrl);//通过id修改图标地址
+
 }

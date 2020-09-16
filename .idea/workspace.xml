@@ -1,26 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TeamFileCollection:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7225371-169b-445d-9b4e-359cdb155139" name="Default Changelist" comment="" />
+    <list default="true" id="b7225371-169b-445d-9b4e-359cdb155139" name="Default Changelist" comment="第一次提交">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/js.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jstl_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/ApplicationDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/CollectionTaskDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/DiscussionDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/TaskFileDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/TeamDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/TeamMemberDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/ApplicationDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/CollectionTaskDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/DiscussionDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/TaskFileDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/TeamDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/TeamMemberDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/CollectionTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/Discussion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/TaskFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/Team.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/TeamMember.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/service/TeamService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/serviceImpl/TeamServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/TeamServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/utils/JDBCUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/druid.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/commons-dbcp-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/commons-dbutils-1.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/druid-1.0.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/hamcrest-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/mchange-commons-java-0.2.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/admin/teamList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/admin/teamLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/admin/teamRegister.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/admin/updateBaseInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/js/jquery-3.2.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/js/team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/service/TeamService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/serviceImpl/TeamServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/TeamServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/four/service/TeamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/four/serviceImpl/TeamServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/TeamServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/hamcrest-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/teamList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/teamLogin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/teamRegister.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin/updateBaseInfo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery-3.2.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/TeamFileCollection_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/TeamFileCollection_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamFileCollection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamFileCollection.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/daoimpl/TeamDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/daoimpl/TeamDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/entity/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/entity/Team.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/dao/TeamDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/dao/TeamDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/daoimpl/DiscussionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/daoimpl/DiscussionDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/daoimpl/TeamDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/daoimpl/TeamDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/entity/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/entity/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/js/jquery-3.2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/jquery-3.2.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="team_file_collection@122.51.45.176" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="JavaScript File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -31,33 +152,61 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="40" />
-    <option name="y" value="24" />
-    <option name="width" value="1346" />
-    <option name="height" value="735" />
-  </component>
   <component name="ProjectId" id="1hU5Ev8nI8JUfmfvZmYpfg3Q63T" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599644167257" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\IDEA\clone_TeamFileCollection\web\admin" />
+      <recent name="D:\Code\IDEA\clone_TeamFileCollection\web" />
       <recent name="D:\java\TeamFileCollection\src" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\IDEA\clone_TeamFileCollection\web\admin" />
+      <recent name="D:\Code\IDEA\clone_TeamFileCollection\web\WEB-INF\lib" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.37">
     <configuration name="ApplicationDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.four.daoimpl.ApplicationDaoImpl" />
       <module name="TeamFileCollection" />
@@ -71,11 +220,138 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeamFileCollection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TeamFileCollection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com" />
+      <option name="MAIN_CLASS_NAME" value="com.Test" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.37" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.37" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="TeamFileCollection:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/TeamFileCollection_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_clone_TeamFileCollection" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="29727" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="TeamFileCollection:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ApplicationDaoImpl" />
+      <item itemvalue="JUnit.Test.test" />
+      <item itemvalue="JUnit.Test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.37" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test" />
+        <item itemvalue="JUnit.Test.test" />
         <item itemvalue="Application.ApplicationDaoImpl" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d5ed3387" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
@@ -91,70 +367,65 @@
       <workItem from="1599650082575" duration="12000" />
       <workItem from="1599728991939" duration="32000" />
       <workItem from="1600052723409" duration="940000" />
+      <workItem from="1600066671395" duration="26927000" />
+      <workItem from="1600127667617" duration="37102000" />
+      <workItem from="1600215786374" duration="19542000" />
     </task>
+    <task id="LOCAL-00001" summary="注册测试">
+      <created>1600068748218</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600068748218</updated>
+    </task>
+    <task id="LOCAL-00002" summary="注册测试">
+      <created>1600069209739</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600069209739</updated>
+    </task>
+    <task id="LOCAL-00003" summary="注册测试">
+      <created>1600069354122</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600069354122</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="注册测试" />
+    <MESSAGE value="第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1600052990702">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1600052990702" />
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-    <state width="1493" height="239" key="GridCell.Tab.0.center" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-    <state width="1493" height="239" key="GridCell.Tab.0.left" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-    <state width="1493" height="239" key="GridCell.Tab.0.right" timestamp="1600052998003">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600052998003" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.20305052" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom" />
+    <state width="1493" height="239" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="239" key="GridCell.Tab.0.center" />
+    <state width="1493" height="239" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left" />
+    <state width="1493" height="239" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right" />
+    <state width="1493" height="239" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" />
   </component>
 </project>

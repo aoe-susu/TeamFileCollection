@@ -18,4 +18,5 @@ public class DiscussionDaoImpl implements DiscussionDao {
     public int deleteDiscussionByTeamId(int teamId) {
         return 0;
     }
+
 }
