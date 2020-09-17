@@ -1,8 +1,10 @@
 package com.four.entity;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CollectionTask {
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     private  int id;
     private String title;
     private String content;
@@ -49,4 +51,14 @@ public class CollectionTask {
         this.deadline = deadline;
     }
 
+    @Override
+    public String toString() {
+        return "CollectionTask{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", teamId=" + teamId +
+                ", deadline=" + deadline +
+                '}';
+    }
 }
