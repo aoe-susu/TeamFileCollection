@@ -19,6 +19,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="commons-dbcp-1.4" level="project" />
+    <orderEntry type="library" exported="" name="commons-dbcp-1.4" level="project" />
+    <orderEntry type="library" exported="" name="4" level="project" />
+    <orderEntry type="library" exported="" name="jstl-1.2" level="project" />
   </component>
 </module>

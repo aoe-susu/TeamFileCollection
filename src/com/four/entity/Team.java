@@ -1,6 +1,7 @@
 package com.four.entity;
 
 public class Team {
+
     private int id;
     private String account;
     private String name;

@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="TeamFileCollection" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="commons-dbcp-1.4" />
+          <element id="library" level="project" name="4" />
+          <element id="library" level="project" name="jstl-1.2" />
+        </element>
       </element>
     </root>
   </artifact>

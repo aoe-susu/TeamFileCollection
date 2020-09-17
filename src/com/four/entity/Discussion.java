@@ -3,6 +3,7 @@ package com.four.entity;
 import java.util.Date;
 
 public class Discussion {
+
     private int id;
     private int sendMemberId;
     private int receiveMemberId;

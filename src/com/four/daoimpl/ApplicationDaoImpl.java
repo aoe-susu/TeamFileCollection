@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class ApplicationDaoImpl implements ApplicationDao {
+
     private static QueryRunner queryRunner = new QueryRunner(JDBCUtils.getDataSource());
     @Override
     public int addApplication(Application application) {

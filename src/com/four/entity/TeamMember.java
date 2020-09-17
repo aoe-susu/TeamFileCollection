@@ -7,7 +7,7 @@ public class TeamMember {
     private String name;
     private String iconUrl;
     private int teamId;
-
+    
     public int getId() {
         return id;
     }
