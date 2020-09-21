@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Map;
 
 public interface CollectionTaskDao {
-    public List<CollectionTask> findAll() throws SQLException;
+    public List<CollectionTask> findAll() throws SQLException;//通过id获取任务列表
 
     public void  addCollectionTask(CollectionTask task) throws SQLException;//添加收集任务
 
@@ -22,7 +22,7 @@ public interface CollectionTaskDao {
 
     public List<CollectionTask> getCollectionTaskListByTeamId(int teamId) throws SQLException;//通过团队id获取任务列表
 
-    public List<CollectionTask> getCollectionTaskListByTeamIdAfterTime(int teamId, Date dateTime);//通过团队id获取比当前时间大的任务列表（未截止的任务）
+    public List<CollectionTask> getCollectionTaskListByTeamIdAfterTime(int start, int rows, Map<String, String[]> condition, Date dateTime) throws SQLException;//通过团队id获取比当前时间大的任务列表（未截止的任务）
 
     /**
      * 查询总记录数
@@ -30,6 +30,8 @@ public interface CollectionTaskDao {
      * @param condition
      */
     int findTotalCount(Map<String, String[]> condition) throws SQLException;
+
+    int findTotalCountAfterTime(Map<String, String[]> condition,Date date) throws SQLException;
 
     /**
      * 分页查询每页记录

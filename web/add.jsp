@@ -40,7 +40,7 @@
             <input type="text" class="form-control" id="content" name="content" placeholder="请输入任务说明">
         </div>
 
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label for="teamId">团队ID：</label>
             <input type="text" class="form-control" id="teamId" name="teamId" placeholder="请输入团队ID">
         </div>

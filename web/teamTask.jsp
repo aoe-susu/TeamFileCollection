@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- saved from url=(0076)https://tower.im/members/e43457750de8deb93cb2b9a276c02112/todos/uncompleted/ -->
 <html lang="zh-cmn-Hans">
@@ -93,6 +93,12 @@
                 location.href="${pageContext.request.contextPath}/add.jsp";
             })
         })
+
+        $(document).ready(function () {
+            $("#deadline").click(function () {
+                location.href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet";
+            })
+        })
     </script>
 </head>
 <body class="">
@@ -113,7 +119,7 @@
             </div>
             <ul class="nav">
                 <li class="">
-                    <a href="">团队文件收集系统</a>
+                    <a href="#">团队文件收集系统</a>
                 </li>
             </ul>
             <div class="command-bar">
@@ -248,7 +254,7 @@
                                     查看全部任务
                                 </button>
                             <%--<a href="">查看未截止任务</a>--%>
-                                <button type="button" class="btn btn-primary btn-xs">
+                                <button type="button" class="btn btn-primary btn-xs" id="deadline">
                                     查看未截止任务
                                 </button>
                         </div>
@@ -311,45 +317,91 @@
                         <div>
                             <nav aria-label="Page navigation">
                                 <ul class="pagination">
-                                    <c:if test="${pb.currentPage==1}">
-                                        <li class="disabled" style="pointer-events:none">
-                                            <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
+                                    <c:if test="${filter!='time'}">
+                                        <c:if test="${pb.currentPage==1}">
+                                            <li class="disabled" style="pointer-events:none">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
+                                        <c:if test="${pb.currentPage!=1}">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
                                     </c:if>
-                                    <c:if test="${pb.currentPage!=1}">
-                                        <li>
-                                            <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
+                                    <c:if test="${filter=='time'}">
+                                        <c:if test="${pb.currentPage==1}">
+                                            <li class="disabled" style="pointer-events:none">
+                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
+                                        <c:if test="${pb.currentPage!=1}">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
                                     </c:if>
 
                                     <c:forEach begin="1" end="${pb.totalPage}" var="i">
 
-                                        <c:if test="${pb.currentPage==i}">
-                                            <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                        <c:if test="${filter!='time'}">
+                                            <c:if test="${pb.currentPage==i}">
+                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                            </c:if>
+                                            <c:if test="${pb.currentPage!=i}">
+                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                            </c:if>
                                         </c:if>
-                                        <c:if test="${pb.currentPage!=i}">
-                                            <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                        <c:if test="${filter=='time'}">
+                                            <c:if test="${pb.currentPage==i}">
+                                                <li class="active"><a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                            </c:if>
+                                            <c:if test="${pb.currentPage!=i}">
+                                                <li><a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                            </c:if>
                                         </c:if>
                                     </c:forEach>
+                                    <c:if test="${filter!='time'}">
+                                        <c:if test="${pb.currentPage==pb.totalPage}">
+                                            <li class="disabled" style="pointer-events:none">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
+                                        <c:if test="${pb.currentPage!=pb.totalPage}">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
+                                    </c:if>
+                                    <c:if test="${filter=='time'}">
+                                        <c:if test="${pb.currentPage==pb.totalPage}">
+                                            <li class="disabled" style="pointer-events:none">
+                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
+                                        <c:if test="${pb.currentPage!=pb.totalPage}">
+                                            <li>
+                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </c:if>
+                                    </c:if>
 
-                                    <c:if test="${pb.currentPage==pb.totalPage}">
-                                        <li class="disabled" style="pointer-events:none">
-                                            <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    </c:if>
-                                    <c:if test="${pb.currentPage!=pb.totalPage}">
-                                        <li>
-                                            <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    </c:if>
 
                                     <span style="font-size: 25px;margin-left: 5px">
                                         共${pb.totalCount}条记录，共${pb.totalPage}页

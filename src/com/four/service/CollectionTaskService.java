@@ -4,6 +4,7 @@ import com.four.entity.CollectionTask;
 import com.four.entity.PageBean;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -53,4 +54,6 @@ public interface CollectionTaskService {
      * @return
      */
     PageBean<CollectionTask> findCollectionTaskByPage(String currentPage, String rows, Map<String, String[]> condition) throws SQLException;
+
+    PageBean<CollectionTask> findCollectionTaskByPageAfterTime(String currentPage, String rows, Map<String, String[]> condition, Date date) throws SQLException;
 }

@@ -12,12 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
-@WebServlet("/findCollectionTaskByPageServlet")
-public class FindCollectionTaskByPageServlet extends HttpServlet {
+@WebServlet("/FindCollectionTaskByPageAfterTimeServlet")
+public class FindCollectionTaskByPageAfterTimeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
 
@@ -34,12 +33,12 @@ public class FindCollectionTaskByPageServlet extends HttpServlet {
         CollectionTaskService service=new CollectionTaskServiceImpl();
         PageBean<CollectionTask> pb= null;
         try {
-                pb = service.findCollectionTaskByPage(currentPage, rows, condition);
+            pb = service.findCollectionTaskByPageAfterTime(currentPage,rows,condition,new Date());
         } catch (SQLException e) {
             e.printStackTrace();
         }
         request.setAttribute("pb",pb);
-        request.setAttribute("filter",null);
+        request.setAttribute("filter","time");
         request.setAttribute("condition",condition);
         request.getRequestDispatcher("/teamTask.jsp").forward(request,response);
 

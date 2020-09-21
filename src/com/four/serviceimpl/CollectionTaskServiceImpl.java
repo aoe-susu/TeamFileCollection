@@ -7,6 +7,7 @@ import com.four.entity.PageBean;
 import com.four.service.CollectionTaskService;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -72,6 +73,37 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         //调用dao查询List集合
         int start=(currentPage-1)*rows;
         List<CollectionTask> list=dao.findByPage(start,rows,condition);
+        pb.setList(list);
+
+        //计算总页码
+        int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
+        pb.setTotalPage(totalPage);
+
+        return pb;
+    }
+
+    @Override
+    public PageBean<CollectionTask> findCollectionTaskByPageAfterTime(String _currentPage, String _rows, Map<String, String[]> condition, Date date) throws SQLException {
+        int currentPage=Integer.parseInt(_currentPage);
+        int rows=Integer.parseInt(_rows);
+
+        if(currentPage<=0){
+            currentPage=1;
+        }
+
+        //创建空的PageBean对象
+        PageBean<CollectionTask> pb=new PageBean<CollectionTask>();
+        //设置参数
+        pb.setCurrentPage(currentPage);
+        pb.setRows(rows);
+
+        //调用dao查询总记录数
+        int totalCount=dao.findTotalCountAfterTime(condition,date);
+        pb.setTotalCount(totalCount);
+
+        //调用dao查询List集合
+        int start=(currentPage-1)*rows;
+        List<CollectionTask> list=dao.getCollectionTaskListByTeamIdAfterTime(start,rows,condition,date);
         pb.setList(list);
 
         //计算总页码
