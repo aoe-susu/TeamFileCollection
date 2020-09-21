@@ -53,10 +53,8 @@
 
         <div class="form-group" style="text-align: center">
             <input class="btn btn-primary" type="submit" value="提交" />
-            <input class="btn btn-default" type="reset" value="重置" />
-            <form action="${pageContext.request.contextPath}/collectionTaskListServlet" method="post">
-            <input class="btn btn-default" type="button" value="返回" />
-            </form>
+            <input class="btn btn-default" type="reset" value="重置"  />
+            <input class="btn btn-default" type="button" value="返回" onclick="javascript:history.back(-1);"/>
         </div>
     </form>
 </div>

@@ -5,6 +5,7 @@ import com.four.entity.PageBean;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public interface CollectionTaskService {
     /**
@@ -45,10 +46,11 @@ public interface CollectionTaskService {
     void delSelectedCollectionTask(String[] ids) throws SQLException;
 
     /**
-     * 分页查询
+     * 分页条件查询
      * @param currentPage
      * @param rows
+     * @param condition
      * @return
      */
-    PageBean<CollectionTask> findCollectionTaskByPage(String currentPage, String rows) throws SQLException;
+    PageBean<CollectionTask> findCollectionTaskByPage(String currentPage, String rows, Map<String, String[]> condition) throws SQLException;
 }

@@ -5,6 +5,8 @@ import com.four.entity.CollectionTask;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Date;
+import java.util.Map;
+
 public interface CollectionTaskDao {
     public List<CollectionTask> findAll() throws SQLException;
 
@@ -25,14 +27,16 @@ public interface CollectionTaskDao {
     /**
      * 查询总记录数
      * @return
+     * @param condition
      */
-    int findTotalCount() throws SQLException;
+    int findTotalCount(Map<String, String[]> condition) throws SQLException;
 
     /**
      * 分页查询每页记录
      * @param start
      * @param rows
+     * @param condition
      * @return
      */
-    List<CollectionTask> findByPage(int start, int rows) throws SQLException;
+    List<CollectionTask> findByPage(int start, int rows, Map<String, String[]> condition) throws SQLException;
 }

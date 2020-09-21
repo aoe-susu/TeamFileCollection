@@ -7,8 +7,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.*;
 
 import java.sql.SQLException;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class CollectionTaskDaoImpl implements CollectionTaskDao {
     private QueryRunner queryRunner=new QueryRunner(JDBCUtils.getDataSource());
@@ -70,16 +69,57 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     }
 
     @Override
-    public int findTotalCount() throws SQLException {
-        String sql="select count(*) from collection_task";
-        long result = queryRunner.query(sql,new ScalarHandler<Long>());
+    public int findTotalCount(Map<String, String[]> condition) throws SQLException {
+        String sql="select count(*) from collection_task where 1=1";
+        StringBuilder sb = new StringBuilder(sql);
+        Set<String> keySet = condition.keySet();
+        List<Object> params=new ArrayList<Object>();
+        for (String key : keySet) {
+
+            //排除分页条件参数
+            if("currentPage".equals(key)||"rows".equals(key)){
+                continue;
+            }
+
+            String value = condition.get(key)[0];
+            if(value!=null&&!"".equals(value)){
+                sb.append(" and "+key+" like ? ");
+                params.add("%"+value+"%");
+            }
+        }
+        long result = queryRunner.query(sb.toString(),new ScalarHandler<Long>(),params.toArray());
         return (int)result;
     }
 
     @Override
-    public List<CollectionTask> findByPage(int start, int rows) throws SQLException {
-        String sql="select * from collection_task limit ? , ? ";
-        return queryRunner.query(sql,new BeanListHandler<CollectionTask>(CollectionTask.class),start,rows);
+    public List<CollectionTask> findByPage(int start, int rows, Map<String, String[]> condition) throws SQLException {
+        String sql="select * from collection_task where 1=1 ";
+        StringBuilder sb = new StringBuilder(sql);
+        Set<String> keySet = condition.keySet();
+        List<Object> params=new ArrayList<Object>();
+        for (String key : keySet) {
+
+            //排除分页条件参数
+            if("currentPage".equals(key)||"rows".equals(key)){
+                continue;
+            }
+
+            String value = condition.get(key)[0];
+            if(value!=null&&!"".equals(value)){
+                sb.append(" and "+key+" like ? ");
+                params.add("%"+value+"%");
+            }
+        }
+
+        //添加分页查询
+        sb.append(" limit ?,? ");
+        //添加分页查询参数值
+        params.add(start);
+        params.add(rows);
+
+        sql=sb.toString();
+
+        return queryRunner.query(sql,new BeanListHandler<CollectionTask>(CollectionTask.class),params.toArray());
 
     }
 }

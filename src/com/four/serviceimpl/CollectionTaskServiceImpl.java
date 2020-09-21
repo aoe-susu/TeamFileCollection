@@ -8,6 +8,7 @@ import com.four.service.CollectionTaskService;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 public class CollectionTaskServiceImpl implements CollectionTaskService {
     private CollectionTaskDao dao=new CollectionTaskDaoImpl();
@@ -41,17 +42,22 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
 
     @Override
     public void delSelectedCollectionTask(String[] ids) throws SQLException {
-        for (String id : ids) {
-            dao.deleteCollectionTaskById(Integer.parseInt(id));
+        if(ids!=null&&ids.length>0){
+            for (String id : ids) {
+                dao.deleteCollectionTaskById(Integer.parseInt(id));
+            }
         }
     }
 
     @Override
-    public PageBean<CollectionTask> findCollectionTaskByPage(String _currentPage, String _rows) throws SQLException {
+    public PageBean<CollectionTask> findCollectionTaskByPage(String _currentPage, String _rows, Map<String, String[]> condition) throws SQLException {
 
         int currentPage=Integer.parseInt(_currentPage);
         int rows=Integer.parseInt(_rows);
 
+        if(currentPage<=0){
+            currentPage=1;
+        }
 
         //创建空的PageBean对象
         PageBean<CollectionTask> pb=new PageBean<CollectionTask>();
@@ -60,12 +66,12 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         pb.setRows(rows);
 
         //调用dao查询总记录数
-        int totalCount=dao.findTotalCount();
+        int totalCount=dao.findTotalCount(condition);
         pb.setTotalCount(totalCount);
 
         //调用dao查询List集合
         int start=(currentPage-1)*rows;
-        List<CollectionTask> list=dao.findByPage(start,rows);
+        List<CollectionTask> list=dao.findByPage(start,rows,condition);
         pb.setList(list);
 
         //计算总页码

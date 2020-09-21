@@ -7,127 +7,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7225371-169b-445d-9b4e-359cdb155139" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/hp.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_beanutils_1_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_jsp_jstl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/META-INF/TeamFileCollection.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/ApplicationDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/CollectionTaskDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/DiscussionDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/TaskFileDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/TeamDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/TeamMemberDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/ApplicationDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/CollectionTaskDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/DiscussionDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/TaskFileDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/TeamDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/TeamMemberDaoImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/CollectionTask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/Discussion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/PageBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/TaskFile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/Team.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/entity/TeamMember.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/service/CollectionTaskService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/serviceimpl/CollectionTaskServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/CollectionTaskListServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/DelCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/DelSelectedServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskByPageServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/UpdateCollectionTaskServlet$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/UpdateCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/utils/JDBCUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/druid.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/commons-dbcp-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/commons-dbutils-1.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/druid-1.0.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/jstl-impl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/mchange-commons-java-0.2.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/update.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/META-INF/TeamFileCollection.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/entity/PageBean.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/service/CollectionTaskService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/serviceimpl/CollectionTaskServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/CollectionTaskListServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/DelCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/DelSelectedServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskByPageServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/UpdateCollectionTaskServlet$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/UpdateCollectionTaskServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/entity/PageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/service/CollectionTaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/serviceimpl/CollectionTaskServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/AddCollectionTaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/DelCollectionTaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/DelSelectedServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/UpdateCollectionTaskServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.8.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jstl-impl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/jquery-3.2.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jquery_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/desktop-2f3f812d.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/tr_organization-dad0b220.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/css/tr_repository-10ca2615.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/img/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/img/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/teamTask.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/teamTask.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/desktop-2f3f812d.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/tr_organization-dad0b220.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/tr_repository-10ca2615.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/teamTask.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/teamTask.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamFileCollection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TeamFileCollection.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/CollectionTaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/CollectionTaskDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/CollectionTaskDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/CollectionTaskDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/service/CollectionTaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/service/CollectionTaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/serviceimpl/CollectionTaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/serviceimpl/CollectionTaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/CollectionTaskListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskByPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskByPageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/dao/CollectionTaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/dao/CollectionTaskDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/daoimpl/CollectionTaskDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/daoimpl/CollectionTaskDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/entity/CollectionTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/entity/CollectionTask.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/service/CollectionTaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/service/CollectionTaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/serviceimpl/CollectionTaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/serviceimpl/CollectionTaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/CollectionTaskListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskByPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskByPageServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/four/dao/CollectionTaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/dao/CollectionTaskDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/four/daoimpl/CollectionTaskDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/daoimpl/CollectionTaskDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/four/entity/CollectionTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/entity/CollectionTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/js/jquery-3.2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/js/jquery-3.2.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/service/CollectionTaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/service/CollectionTaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/serviceimpl/CollectionTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/serviceimpl/CollectionTaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/servlet/AddCollectionTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/servlet/AddCollectionTaskServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,9 +80,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -201,7 +129,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1599644167257" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ClassLoaderDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -213,7 +141,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -222,6 +150,8 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\software\IDEA\Tomcat\clone_TeamFileCollection\web" />
+      <recent name="D:\software\IDEA\Tomcat\clone_TeamFileCollection\web\css" />
+      <recent name="D:\software\IDEA\Tomcat\clone_TeamFileCollection\web\js" />
       <recent name="D:\software\IDEA\Tomcat\clone_TeamFileCollection\web\WEB-INF\lib" />
       <recent name="D:\software\IDEA\Tomcat\clone_TeamFileCollection\web\WEB-INF\js" />
     </key>
@@ -444,7 +374,12 @@
       <workItem from="1600130429882" duration="31559000" />
       <workItem from="1600215881079" duration="27185000" />
       <workItem from="1600261171933" duration="1944000" />
-      <workItem from="1600304996550" duration="7477000" />
+      <workItem from="1600304996550" duration="21264000" />
+      <workItem from="1600388782809" duration="27843000" />
+      <workItem from="1600433603646" duration="425000" />
+      <workItem from="1600475408642" duration="18816000" />
+      <workItem from="1600599498503" duration="4394000" />
+      <workItem from="1600605337195" duration="1679000" />
     </task>
     <task id="LOCAL-00001" summary="回到初始版本 v1.0">
       <created>1600068127033</created>
@@ -453,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600068127033</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="版本1.1">
+      <created>1600328200226</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600328200226</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +416,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="回到初始版本 v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="回到初始版本 v1.0" />
+    <MESSAGE value="版本1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="版本1.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser" />
