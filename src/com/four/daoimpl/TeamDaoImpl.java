@@ -2,8 +2,47 @@ package com.four.daoimpl;
 
 import com.four.dao.TeamDao;
 import com.four.entity.Team;
+import com.four.utils.JDBCUtils;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
+import sun.plugin2.main.server.ResultHandler;
+
+import javax.sql.DataSource;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
 
 public class TeamDaoImpl implements TeamDao {
+
+    private static QueryRunner queryRunner = new QueryRunner(JDBCUtils.getDataSource());
+    @Override
+    public List<Team> getTeams() {
+        String sql = "select * from team ";
+        try {
+            List<Team> query = queryRunner.query(sql, new BeanListHandler<Team>(Team.class));
+            return query;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public int getTotalCounts() {
+        String sql = "select count(*) from team";
+        try {
+          Number number = queryRunner.query(sql,new ScalarHandler<Integer>());
+           return number.intValue();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return 0;
+    }
+
     @Override
     public Team getTeamById(int id) {
         return null;
@@ -36,7 +75,14 @@ public class TeamDaoImpl implements TeamDao {
 
     @Override
     public int deleteTeamById(int id) {
-        return 0;
+        String sql = "delete from team where id=?";
+        try {
+           int number =  queryRunner.update(sql,id);
+           return number;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return -1;
     }
 
     @Override

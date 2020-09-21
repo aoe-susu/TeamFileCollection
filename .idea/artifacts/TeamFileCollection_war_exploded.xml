@@ -11,6 +11,10 @@
           <element id="library" level="project" name="commons-dbcp-1.4" />
           <element id="library" level="project" name="4" />
           <element id="library" level="project" name="jstl-1.2" />
+          <element id="library" level="project" name="1.2" />
+          <element id="library" level="project" name="gson-2.8.5" />
+          <element id="library" level="project" name="2.10" />
+          <element id="library" level="project" name="3.3" />
         </element>
       </element>
     </root>
