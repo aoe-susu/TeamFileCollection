@@ -15,7 +15,7 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-
+        System.out.println("--------myfilter---------");
         HttpServletResponse response = (HttpServletResponse)servletResponse;
         response.setHeader("Access-Control-Allow-Origin", "*do");
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE,LOGIN");

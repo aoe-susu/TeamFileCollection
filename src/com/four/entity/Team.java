@@ -1,6 +1,8 @@
 package com.four.entity;
 
-public class Team {
+import java.io.Serializable;
+
+public class Team  implements Serializable {
 
     private int id;
     private String account;
@@ -55,5 +57,16 @@ public class Team {
 
     public void setIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", name='" + name + '\'' +
+                ", introduction='" + introduction + '\'' +
+                ", iconUrl='" + iconUrl + '\'' +
+                '}';
     }
 }

@@ -29,7 +29,7 @@ public class TeamMemberDaoImpl implements TeamMemberDao {
         }
         return count;
     }
-
+    
     @Override
     public List<TeamMember> getMemberListByTeamId(int teamId) {
         String sql = "select * from team_member where teamId=?";
@@ -68,6 +68,7 @@ public class TeamMemberDaoImpl implements TeamMemberDao {
 
     @Override
     public Boolean existMemberNumber(String num) {
+
         String sql = "select * from team_member where number=?";
         boolean count = false;
         TeamMember teamMember;
