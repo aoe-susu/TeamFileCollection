@@ -48,11 +48,11 @@
     <script>
         function deleteTask(id) {
             if(confirm("您确定要删除吗？")){
-                location.href="${pageContext.request.contextPath}/delCollectionTaskServlet?id="+id;
+                location.href="${pageContext.request.contextPath}/delCollectionTaskServlet?currentPage=${pb.currentPage}&rows=3&id="+id+"&all=${pageContext.request.getParameter("all")}";
             }
         }
 
-        window.onload=function () {
+        /*window.onload=function () {
             document.getElementById("delSelected").onclick=function () {
                 if(confirm("您确定要删除选中条目吗？")){
                     var flag=false;
@@ -76,7 +76,7 @@
                     cbs[i].checked=this.checked;
                 }
             }
-        }
+        }*/
 
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').focus();
@@ -84,19 +84,19 @@
 
         $(document).ready(function () {
             $("#button").click(function () {
-                location.href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet";
+                location.href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?all=true";
             })
         })
 
         $(document).ready(function () {
             $("#add").click(function () {
-                location.href="${pageContext.request.contextPath}/add.jsp";
+                location.href="${pageContext.request.contextPath}/add.jsp?currentPage=${pb.currentPage}&rows=3&all=${pageContext.request.getParameter("all")}";
             })
         })
 
         $(document).ready(function () {
             $("#deadline").click(function () {
-                location.href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet";
+                location.href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?all=false";
             })
         })
     </script>
@@ -124,12 +124,16 @@
             </ul>
             <div class="command-bar">
                 <div class="twr-search-bar">
+                    <a href="" class="link-search"><i class="twr twr-search"></i></a>
+                    <input id="txt-search" type="text" class="no-border" placeholder="搜索团队" autocomplete="off">
+                </div>
+                <%--<div class="twr-search-bar">
                     <a href="#" onclick="document.getElementById('myForm').submit();return false;" class="link-search"><i class="twr twr-search"></i></a>
                     <form action="${pageContext.request.contextPath}/findCollectionTaskByPageServlet" id="myForm">
                         <input id="txt-search" name="teamId" type="text" class="no-border" value="${condition.teamId[0]}"  placeholder="搜索团队" autocomplete="off">
                     </form>
 
-                </div>
+                </div>--%>
                 <%--<div style="float:left;">
                     <form class="form-inline" action="${pageContext.request.contextPath}/findCollectionTaskByPageServlet" method="post">
                         <div class="form-group">
@@ -272,7 +276,7 @@
                                                 <a class="del action" title="删除" href="javascript:deleteTask(${task.id});">
                                                     <i class="twr twr-trash"></i>
                                                 </a>
-                                                <a class="action edit" title="编辑" href="${pageContext.request.contextPath}/findCollectionTaskServlet?id=${task.id}">
+                                                <a class="action edit" title="编辑" href="${pageContext.request.contextPath}/findCollectionTaskServlet?currentPage=${pb.currentPage}&rows=3&id=${task.id}&all=${pageContext.request.getParameter("all")}">
                                                     <div class="action"><i class="twr twr-pencil-square-o"></i></div>
                                                 </a>
                                                 <a class="action edit" title="提交文件" href="">
@@ -320,14 +324,14 @@
                                     <c:if test="${filter!='time'}">
                                         <c:if test="${pb.currentPage==1}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
                                                     <span aria-hidden="true">&laquo;</span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=1}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
                                                     <span aria-hidden="true">&laquo;</span>
                                                 </a>
                                             </li>
@@ -336,14 +340,14 @@
                                     <c:if test="${filter=='time'}">
                                         <c:if test="${pb.currentPage==1}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
                                                     <span aria-hidden="true">&laquo;</span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=1}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Previous">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
                                                     <span aria-hidden="true">&laquo;</span>
                                                 </a>
                                             </li>
@@ -351,35 +355,35 @@
                                     </c:if>
 
                                     <c:forEach begin="1" end="${pb.totalPage}" var="i">
-
                                         <c:if test="${filter!='time'}">
                                             <c:if test="${pb.currentPage==i}">
-                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                             <c:if test="${pb.currentPage!=i}">
-                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                         </c:if>
                                         <c:if test="${filter=='time'}">
                                             <c:if test="${pb.currentPage==i}">
-                                                <li class="active"><a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                             <c:if test="${pb.currentPage!=i}">
-                                                <li><a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}">${i}</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                         </c:if>
                                     </c:forEach>
+
                                     <c:if test="${filter!='time'}">
                                         <c:if test="${pb.currentPage==pb.totalPage}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
                                                     <span aria-hidden="true">&raquo;</span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=pb.totalPage}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
                                                     <span aria-hidden="true">&raquo;</span>
                                                 </a>
                                             </li>
@@ -388,21 +392,19 @@
                                     <c:if test="${filter=='time'}">
                                         <c:if test="${pb.currentPage==pb.totalPage}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
                                                     <span aria-hidden="true">&raquo;</span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=pb.totalPage}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/FindCollectionTaskByPageAfterTimeServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}" aria-label="Next">
+                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
                                                     <span aria-hidden="true">&raquo;</span>
                                                 </a>
                                             </li>
                                         </c:if>
                                     </c:if>
-
-
                                     <span style="font-size: 25px;margin-left: 5px">
                                         共${pb.totalCount}条记录，共${pb.totalPage}页
                                     </span>

@@ -22,7 +22,7 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     @Override
     public void addCollectionTask(CollectionTask task) throws SQLException {
         String sql="insert into collection_task values(null,?,?,?,?)";
-        queryRunner.update(sql,task.getTitle(),task.getContent(),2,task.getDeadline());
+        queryRunner.update(sql,task.getTitle(),task.getContent(),task.getTeamId(),task.getDeadline());
 
     }
 

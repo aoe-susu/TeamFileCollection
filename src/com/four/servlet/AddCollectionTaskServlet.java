@@ -66,8 +66,8 @@ public class AddCollectionTaskServlet extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        response.sendRedirect(request.getContextPath()+"/findCollectionTaskByPageServlet?currentPage="+request.getParameter("currentPage")+"&rows=3&all="+request.getParameter("all"));
 
-        response.sendRedirect(request.getContextPath()+"/findCollectionTaskByPageServlet");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -59,7 +59,9 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         if(currentPage<=0){
             currentPage=1;
         }
-
+        int totalCount=dao.findTotalCount(condition);
+        int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
+        if(currentPage>totalPage) currentPage=totalPage;
         //创建空的PageBean对象
         PageBean<CollectionTask> pb=new PageBean<CollectionTask>();
         //设置参数
@@ -67,7 +69,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         pb.setRows(rows);
 
         //调用dao查询总记录数
-        int totalCount=dao.findTotalCount(condition);
+
         pb.setTotalCount(totalCount);
 
         //调用dao查询List集合
@@ -76,7 +78,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         pb.setList(list);
 
         //计算总页码
-        int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
+
         pb.setTotalPage(totalPage);
 
         return pb;
@@ -90,7 +92,9 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         if(currentPage<=0){
             currentPage=1;
         }
-
+        int totalCount=dao.findTotalCountAfterTime(condition,date);
+        int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
+        if(currentPage>totalPage) currentPage=totalPage;
         //创建空的PageBean对象
         PageBean<CollectionTask> pb=new PageBean<CollectionTask>();
         //设置参数
@@ -98,7 +102,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         pb.setRows(rows);
 
         //调用dao查询总记录数
-        int totalCount=dao.findTotalCountAfterTime(condition,date);
+
         pb.setTotalCount(totalCount);
 
         //调用dao查询List集合
@@ -107,7 +111,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         pb.setList(list);
 
         //计算总页码
-        int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
+
         pb.setTotalPage(totalPage);
 
         return pb;

@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
 
 @WebServlet("/findCollectionTaskByPageServlet")
 public class FindCollectionTaskByPageServlet extends HttpServlet {
@@ -30,18 +29,36 @@ public class FindCollectionTaskByPageServlet extends HttpServlet {
             rows="3";
         }
         //获取条件查询的参数
-        Map<String, String[]> condition = request.getParameterMap();
+        String all=request.getParameter("all");
+        Map<String, String[]> temp = request.getParameterMap();
+        Map<String, String[]> condition=new HashMap<String, String[]>();
+        for (String s : temp.keySet()) {
+            if(!"all".equals(s)){
+                condition.put(s,temp.get(s));
+            }
+        }
         CollectionTaskService service=new CollectionTaskServiceImpl();
         PageBean<CollectionTask> pb= null;
         try {
+            if("true".equals(all)){
                 pb = service.findCollectionTaskByPage(currentPage, rows, condition);
+            }
+            else{
+                pb = service.findCollectionTaskByPageAfterTime(currentPage,rows,condition,new Date());
+            }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
         request.setAttribute("pb",pb);
-        request.setAttribute("filter",null);
+        if("true".equals(all)){
+            request.setAttribute("filter",null);
+        }
+       else{
+            request.setAttribute("filter","time");
+        }
         request.setAttribute("condition",condition);
-        request.getRequestDispatcher("/teamTask.jsp").forward(request,response);
+        request.getRequestDispatcher("/teamTask.jsp?all="+all).forward(request,response);
 
     }
 

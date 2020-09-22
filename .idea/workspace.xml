@@ -7,33 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7225371-169b-445d-9b4e-359cdb155139" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskByPageAfterTimeServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskByPageAfterTimeServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageAfterTimeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/CollectionTaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/dao/CollectionTaskDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/CollectionTaskDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/daoimpl/CollectionTaskDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/service/CollectionTaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/service/CollectionTaskService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/serviceimpl/CollectionTaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/serviceimpl/CollectionTaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/AddCollectionTaskServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/DelCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/DelCollectionTaskServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskByPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/FindCollectionTaskByPageServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/druid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/UpdateCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/WEB-INF/classes/com/four/servlet/UpdateCollectionTaskServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/teamTask.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/teamTask.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/teamTask.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/dao/CollectionTaskDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/dao/CollectionTaskDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/TeamFileCollection_war_exploded/update.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/daoimpl/CollectionTaskDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/daoimpl/CollectionTaskDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/service/CollectionTaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/service/CollectionTaskService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/serviceimpl/CollectionTaskServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/serviceimpl/CollectionTaskServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/AddCollectionTaskServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/DelCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/DelCollectionTaskServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskByPageServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/FindCollectionTaskByPageServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/druid.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/four/dao/CollectionTaskDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/dao/CollectionTaskDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/UpdateCollectionTaskServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TeamFileCollection/com/four/servlet/UpdateCollectionTaskServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/four/daoimpl/CollectionTaskDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/daoimpl/CollectionTaskDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/four/service/CollectionTaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/service/CollectionTaskService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/four/serviceimpl/CollectionTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/serviceimpl/CollectionTaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/servlet/AddCollectionTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/servlet/AddCollectionTaskServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/servlet/DelCollectionTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/servlet/DelCollectionTaskServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/druid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/four/servlet/UpdateCollectionTaskServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/four/servlet/UpdateCollectionTaskServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/add.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/teamTask.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/teamTask.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -360,7 +358,8 @@
       <workItem from="1600599498503" duration="4394000" />
       <workItem from="1600605337195" duration="1679000" />
       <workItem from="1600648006222" duration="523000" />
-      <workItem from="1600667750282" duration="23510000" />
+      <workItem from="1600667750282" duration="23559000" />
+      <workItem from="1600734372780" duration="13611000" />
     </task>
     <task id="LOCAL-00001" summary="回到初始版本 v1.0">
       <created>1600068127033</created>
@@ -390,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600650244661</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="版本1.4">
+      <created>1600701416035</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600701416035</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +420,8 @@
     <MESSAGE value="版本1.1" />
     <MESSAGE value="版本1.2" />
     <MESSAGE value="版本1.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="版本1.3" />
+    <MESSAGE value="版本1.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="版本1.4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="113" key="#com.intellij.ide.util.MemberChooser" />
@@ -432,9 +439,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/four/daoimpl/CollectionTaskDaoImpl.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/com/four/serviceimpl/CollectionTaskServiceImpl.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/four/servlet/FindCollectionTaskByPageServlet.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

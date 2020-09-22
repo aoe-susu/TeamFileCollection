@@ -19,7 +19,7 @@
     <body>
         <div class="container" style="width: 400px;">
         <h3 style="text-align: center;">修改任务</h3>
-        <form action="${pageContext.request.contextPath}/updateCollectionTaskServlet" method="post">
+        <form action="${pageContext.request.contextPath}/updateCollectionTaskServlet?currentPage=${pageContext.request.getParameter("currentPage")}&rows=3&all=${pageContext.request.getParameter("all")}" method="post">
             <!--隐藏域 提交id -->
             <input type="hidden" name="id" value="${task.id}">
           <div class="form-group">

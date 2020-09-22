@@ -29,7 +29,7 @@
 <body>
 <div class="container">
     <center><h3>添加任务</h3></center>
-    <form action="${pageContext.request.contextPath}/addCollectionTaskServlet" method="post">
+    <form action="${pageContext.request.contextPath}/addCollectionTaskServlet?currentPage=${pageContext.request.getParameter("currentPage")}&rows=3&all=${pageContext.request.getParameter("all")}" method="post">
         <div class="form-group">
             <label for="title">任务标题：</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="请输入任务标题">
