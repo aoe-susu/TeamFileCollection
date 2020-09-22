@@ -1,0 +1,85 @@
+﻿初次运行git
+  git conﬁg --global user.name "John Doe
+  git conﬁg --global user.email johndoe@example.co
+  第一个要配置的是你个人的用户名称和电子邮件地址
+  
+1.git init    初始化项目  进入到你想要管理的项目
+
+2.git add 文件名.文件后缀   *.c(所有c为后缀的文件)  .(有修改的文件)
+               加入工作范畴，对文件进行跟踪
+			   
+3.git status 查看当前git状态
+
+4.git commit -m "版本描述文字，必须写"   
+               对跟踪的文件进行提交，版本记录
+			   
+5.从监听列表中移除   git rm -r --cached node_modules 
+			   
+6.忽略某些文件，不监听 touch .gitignore	
+    “# 此为注释 – 将被 Git 忽略
+	*.a       # 忽略
+	所有 .a 结尾的文件 
+	!lib.a    # 但 lib.a 除外 
+	/TODO     # 仅仅忽略项目根目录下的 TODO文件，不包括 subdir/TODO 
+	build/    # 忽略略build/ 目录下的所有文件 
+	doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server
+
+7.查看提交历史   
+	git log   按提交时间列出所有的更新.
+    git log –p -2
+       -p 表示选项展开显示每次提交的内容差异，
+	   -2 表示则仅显示最近的两次 更新
+    git log —pretty=oneline 
+      oneline 将每个提交放在一行显示
+
+8.git reset 代码	 回到历史版本 
+
+ 
+ *********提交github仓库操作********
+步骤：
+1.创建目录及文件
+2.git init
+3.git add 
+4.git commit -m ""
+5.git remote add origin 仓库网址
+               将仓库命名为origin
+6.git push -u origin master
+     同效于 git push -u 仓库网址
+
+	 
+	 *******************************
+	        远程仓库控制操作
+1.git remote : 查看当前配置有哪些远程仓库
+             -v :显示对应的克隆地址
+2. 添加远程仓库: 运行git remote add [shortname] [url]：
+
+3.从远程仓库抓取数据  git fetch [remote-name]
+  到远程仓库中拉取你本地仓库中还没有的数据
+
+4. 推送数据到远程仓库 git push [remote-name] [branch-name]
+           git push origin master
+5. 远程仓库的删除和重命名 git remote rm paul
+
+ @git pull 路线  更新
+***************************************
+       Git 分支
+	  注意初始提交
+1. git branch    testing :创建testing分支
+              -b:创建并转换到
+2. Git checkout testing 切换分支
+   HEAD 指针  指向你正在工作中的本地分支
+3. git merge testing 合并分支
+步骤：
+    1.git init
+	2.git add *
+	3.git commit -m ""
+	4.git branch 分支名称
+	5.git checkout 分支名称
+	6.在分支内编写代码,
+	          git add *,
+			    提交
+	7.git checkout master
+	8.合并分支 git merge 分支名称
+  @ git brash 查看当前工作路线
+
+  

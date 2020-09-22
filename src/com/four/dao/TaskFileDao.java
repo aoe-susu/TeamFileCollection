@@ -16,4 +16,9 @@ public interface TaskFileDao {
 
     public List<TaskFile> getTaskFileListByTaskId(int taskId);//通过任务id获取任务文件列表
 
+    public String modifyAddressById(int memberId);
+
+    public boolean check(int id);
+
+    public int modifyFileAddressById(TaskFile taskFile);
 }
