@@ -1,8 +1,13 @@
 package com.four.utils;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class JDBCUtils {
@@ -20,4 +25,6 @@ public class JDBCUtils {
     public static DataSource getDataSource(){
         return dataSource;
     }
+
+
 }

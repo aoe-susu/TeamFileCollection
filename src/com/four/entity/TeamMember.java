@@ -8,6 +8,11 @@ public class TeamMember {
     private String iconUrl;
     private int teamId;
 
+    public TeamMember() {
+
+    }
+
+
     public int getId() {
         return id;
     }
