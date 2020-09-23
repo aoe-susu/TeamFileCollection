@@ -26,13 +26,13 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="csrf-param" content="authenticity_token">
     <meta name="csrf-token" content="UzxVyWcKQinMPgnzVsnxQsP9ilBl+GUnNL2POcEYZTGTdfz8jhmboXBNQNkNy8OrmggR9IgFXb9P1T305eJS2g==">
-
+    <!-- 1. 导入CSS的全局样式 -->
+<%--    <link href="css/bootstrap.min.css" rel="stylesheet">--%>
 
     <link rel="stylesheet" media="all" href="css/desktop-2f3f812d.css">
     <link rel="stylesheet" media="all" href="css/tr_organization-dad0b220.css">
     <link rel="stylesheet" media="all" href="css/tr_repository-10ca2615.css">
-    <!-- 1. 导入CSS的全局样式 -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+
     <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
     <script src="js/jquery-3.2.1.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
@@ -44,6 +44,32 @@
             background-attachment: fixed;
             background-size: cover;
         }
+        .pagediv{
+            position:absolute;
+            top: 500px;
+        }
+        .pagination li{
+            margin: 20px;
+            display: inline;
+            font-size: 25px;
+        }
+
+        .pagination .btn{
+            color: white;
+        }
+        .pagination .btn:hover{
+            color: white;
+        }
+        .pagination li a{
+            color: black;
+        }
+        .pagination li a:hover{
+            color: #51c6cf;
+        }
+
+        .btn{
+            margin: 0px;
+        }
     </style>
     <script>
         function deleteTask(id) {
@@ -51,7 +77,13 @@
                 location.href="${pageContext.request.contextPath}/delCollectionTaskServlet?currentPage=${pb.currentPage}&rows=3&id="+id+"&all=${pageContext.request.getParameter("all")}";
             }
         }
-
+        var success="${success}";
+        if(success=="true"){
+            alert("上传成功");
+        }
+        else if(success=="false"){
+            alert("上传失败");
+        }
         /*window.onload=function () {
             document.getElementById("delSelected").onclick=function () {
                 if(confirm("您确定要删除选中条目吗？")){
@@ -159,7 +191,7 @@
 
     <div class="container workspace simple-stack simple-stack-transition">
         <div class="page page-root simple-pjax">
-            <div class="page-inner page-member" id="page-member">
+            <div class="page-inner page-member" id="page-member" >
 
                 <div class="member-info">
                     <img class="avatar" alt="团队名称" src="./img/1.gif">
@@ -203,136 +235,104 @@
                 <div class="member-section member-todos">
                     <tr-member-todo-toolbar>
                         <div class="link-actions more">
-                            <%--<a href="${pageContext.request.contextPath}/add.jsp">发布任务</a>--%>
-                                <!-- Button trigger modal -->
-                                <%--<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal">
-                                    添加任务
-                                </button>--%>
-                                <%--<a data-toggle="modal" data-target-platform="#myModal">添加任务</a>--%>
-                                <!-- Modal -->
-                                <%--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h4 class="modal-title" id="myModalLabel">添加任务</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form action="${pageContext.request.contextPath}/addCollectionTaskServlet" method="post">
-                                                    <div class="form-group">
-                                                        <label for="title">任务标题：</label>
-                                                        <input type="text" class="form-control" id="title" name="title" placeholder="请输入任务标题">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="content">任务说明：</label>
-                                                        <input type="text" class="form-control" id="content" name="content" placeholder="请输入任务说明">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="teamId">团队ID：</label>
-                                                        <input type="text" class="form-control" id="teamId" name="teamId" placeholder="请输入团队ID">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="deadline">任务截止时间：</label>
-                                                        &lt;%&ndash;<input type="date" class="form-control" id="deadline" name="deadline" value='<fmt:formatDate value="${officeInspectionOrder.REPORT_DATE}" pattern="yyyy-MM-dd" />' />&ndash;%&gt;
-                                                        <input type="date" class="form-control" id="deadline" name="deadline" value='<fmt:formatDate value="${Date}" pattern="yyyy-MM-dd" />' />
-                                                    </div>
-
-                                                    <div class="modal-footer">
-                                                        <button type="submit" class="btn btn-primary">提交</button>
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>--%>
-                            <%--<a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet">查看全部任务</a>--%>
-                                <button type="submit" class="btn btn-primary btn-xs" id="add">
+                            <a href="${pageContext.request.contextPath}/add.jsp?currentPage=${pb.currentPage}&rows=3&all=${pageContext.request.getParameter("all")}">发布任务</a>
+                            <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?all=true">查看全部任务</a>
+                            <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?all=false">查看未截止任务</a>
+                                <%--<button type="submit" class="" id="add" style="border: none">
                                     发布任务
                                 </button>
-                                <button type="submit" class="btn btn-primary btn-xs" id="button">
+
+                                <button type="submit" class="" id="button" style="border: none">
                                     查看全部任务
                                 </button>
-                            <%--<a href="">查看未截止任务</a>--%>
-                                <button type="button" class="btn btn-primary btn-xs" id="deadline">
+                            &lt;%&ndash;<a href="">查看未截止任务</a>&ndash;%&gt;
+                                <button type="button" class="" id="deadline" style="border: none">
                                     查看未截止任务
-                                </button>
+                                </button>--%>
                         </div>
                     </tr-member-todo-toolbar>
 
                     <tr-member-todo-box class="member-todo-box ">
-                    <c:forEach items="${pb.list}" var="task" varStatus="s">
                         <tr-todos-group>
                             <div class="group-todolists">
                                 <tr-todolist-plus >
+                                    <form id="fileForm" action="${pageContext.request.contextPath}/handIn.do" method="post" enctype="multipart/form-data">
+                                        <input id="file" type="file" name="handFile" style="display: none;"/>
+                                    </form>
+                                    <script>
+                                        function uploadFile(){
+                                            $("#file").change(function () {
+                                                $("#fileForm").submit();
+                                            });
+                                            $("#file").click();
+                                        }
+                                    </script>
+                                    <c:forEach items="${pb.list}" var="task" varStatus="s">
 
-                                    <tr-todo-item-plus>
-                                        <div class="todo-content-container">
-                                            <div class="todo-actions">
-                                                <a class="del action" title="删除" href="javascript:deleteTask(${task.id});">
-                                                    <i class="twr twr-trash"></i>
-                                                </a>
-                                                <a class="action edit" title="编辑" href="${pageContext.request.contextPath}/findCollectionTaskServlet?currentPage=${pb.currentPage}&rows=3&id=${task.id}&all=${pageContext.request.getParameter("all")}">
-                                                    <div class="action"><i class="twr twr-pencil-square-o"></i></div>
-                                                </a>
-                                                <a class="action edit" title="提交文件" href="">
-                                                    <div class="action"><i class="twr twr-upload"></i></div>
-                                                </a>
-                                                <a class="action edit" title="下载文件" href="">
-                                                    <div class="action"><i class="twr twr-download"></i></div>
-                                                </a>
-                                            </div>
-                                            <div class="todo-content">
-                                                <div class="todo-title-container">
-                                                    <div class="todo-sortable-handle">
-                                                        <i class="twr twr-drag"></i>
-                                                    </div>
-                                                    <div class="title-container">
-                                                        &nbsp;<span>${s.count}</span>.&nbsp;
-                                                        <span class="runner twr"></span>
-                                                        <span class="title-content">
-                                                                <a class="todo-rest" href="#">${task.title}</a>
-                                                        </span>
-                                                    </div>
+                                        <tr-todo-item-plus>
+                                            <div class="todo-content-container">
+                                                <div class="todo-actions">
+                                                    <a class="del action" title="删除" href="javascript:deleteTask(${task.id});">
+                                                        <i class="twr twr-trash"></i>
+                                                    </a>
+                                                    <a class="action edit" title="编辑" href="${pageContext.request.contextPath}/findCollectionTaskServlet?currentPage=${pb.currentPage}&rows=4&id=${task.id}&all=${pageContext.request.getParameter("all")}">
+                                                        <div class="action"><i class="twr twr-pencil-square-o"></i></div>
+                                                    </a>
+                                                    <a class="action edit" title="提交文件" href="javascript:uploadFile();">
+
+                                                        <div class="action"><i class="twr twr-upload"></i></div>
+                                                    </a>
+                                                    <a class="action edit" title="下载文件" target="_blank" href="${pageContext.request.contextPath}/downAll.do?taskId=${task.id}">
+                                                        <div class="action"><i class="twr twr-download"></i></div>
+                                                    </a>
                                                 </div>
-                                                <div class="todo-infos">
+                                                <div class="todo-content">
+                                                    <div class="todo-title-container">
+                                                        <div class="todo-sortable-handle">
+                                                            <i class="twr twr-drag"></i>
+                                                        </div>
+                                                        <div class="title-container">
+                                                            &nbsp;<span>${s.count}</span>.&nbsp;
+                                                            <span class="runner twr"></span>
+                                                            <span class="title-content">
+                                                                <a class="todo-rest" href="${pageContext.request.contextPath}/showAllStu.do">${task.title}</a>
+                                                        </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="todo-infos">
                                                         <span class="todo-rest">
-                                                            ${task.content}
+                                                                ${task.content}
                                                         </span>
+                                                    </div>
+                                                </div>
+                                                <div class="todo-due-date">
+                                                    <span>截止至：</span><span><fmt:formatDate type="time" value="${task.deadline}" pattern="yyyy-MM-dd" /></span>
                                                 </div>
                                             </div>
-                                            <div class="todo-due-date">
-                                                <span>截止至：</span><span><fmt:formatDate type="time" value="${task.deadline}" pattern="yyyy-MM-dd" /></span>
-                                            </div>
-                                        </div>
-                                    </tr-todo-item-plus>
+                                        </tr-todo-item-plus>
+                                    </c:forEach>
+
 
                                 </tr-todolist-plus>
                             </div>
                         </tr-todos-group>
-                        <div class="init-message">
-                            没有指派给你的任务
-                        </div>
-                    </c:forEach>
-                        <div>
+
+                        <div class="pagediv">
+                            <br/><br/>
                             <nav aria-label="Page navigation">
                                 <ul class="pagination">
                                     <c:if test="${filter!='time'}">
                                         <c:if test="${pb.currentPage==1}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
+                                                <a class="btn btn-prev-month" href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
+                                                    <span class="twr twr-angle-left" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=1}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
+                                                <a class="btn btn-prev-month" href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
+                                                    <span class="twr twr-angle-left" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
@@ -340,15 +340,15 @@
                                     <c:if test="${filter=='time'}">
                                         <c:if test="${pb.currentPage==1}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
+                                                <a class="btn btn-prev-month" href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
+                                                    <span class="twr twr-angle-left" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=1}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
+                                                <a class="btn btn-prev-month" href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage-1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Previous">
+                                                    <span class="twr twr-angle-left" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
@@ -357,18 +357,18 @@
                                     <c:forEach begin="1" end="${pb.totalPage}" var="i">
                                         <c:if test="${filter!='time'}">
                                             <c:if test="${pb.currentPage==i}">
-                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
+                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                             <c:if test="${pb.currentPage!=i}">
-                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                         </c:if>
                                         <c:if test="${filter=='time'}">
                                             <c:if test="${pb.currentPage==i}">
-                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
+                                                <li class="active"><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                             <c:if test="${pb.currentPage!=i}">
-                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${i}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}">${i}</a></li>
                                             </c:if>
                                         </c:if>
                                     </c:forEach>
@@ -376,15 +376,15 @@
                                     <c:if test="${filter!='time'}">
                                         <c:if test="${pb.currentPage==pb.totalPage}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
+                                                <a class="btn btn-next-month" href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
+                                                    <span class="twr twr-angle-right" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=pb.totalPage}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
+                                                <a class="btn btn-next-month"  href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
+                                                    <span class="twr twr-angle-right" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
@@ -392,20 +392,20 @@
                                     <c:if test="${filter=='time'}">
                                         <c:if test="${pb.currentPage==pb.totalPage}">
                                             <li class="disabled" style="pointer-events:none">
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
+                                                <a class="btn btn-next-month"  href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
+                                                    <span class="twr twr-angle-right" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
                                         <c:if test="${pb.currentPage!=pb.totalPage}">
                                             <li>
-                                                <a href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=3&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
+                                                <a class="btn btn-next-month" href="${pageContext.request.contextPath}/findCollectionTaskByPageServlet?currentPage=${pb.currentPage+1}&rows=4&teamId=${condition.teamId[0]}&all=${pageContext.request.getParameter("all")}" aria-label="Next">
+                                                    <span class="twr twr-angle-right" aria-hidden="true"></span>
                                                 </a>
                                             </li>
                                         </c:if>
                                     </c:if>
-                                    <span style="font-size: 25px;margin-left: 5px">
+                                    <span style="font-size: 20px;margin-left: 5px">
                                         共${pb.totalCount}条记录，共${pb.totalPage}页
                                     </span>
                                 </ul>

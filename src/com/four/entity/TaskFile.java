@@ -9,6 +9,14 @@ public class TaskFile {
     private String address;
     private Date uploadTime;
 
+    public TaskFile() {}
+    public TaskFile(int memberId, int taskId, String address, Date uploadTime) {
+        this.memberId = memberId;
+        this.taskId = taskId;
+        this.address = address;
+        this.uploadTime = uploadTime;
+    }
+
     public int getId() {
         return id;
     }

@@ -26,14 +26,14 @@ public class FindCollectionTaskByPageServlet extends HttpServlet {
             currentPage="1";
         }
         if(rows==null||"".equals(rows)){
-            rows="3";
+            rows="4";
         }
         //获取条件查询的参数
         String all=request.getParameter("all");
         Map<String, String[]> temp = request.getParameterMap();
         Map<String, String[]> condition=new HashMap<String, String[]>();
         for (String s : temp.keySet()) {
-            if(!"all".equals(s)){
+            if(!"all".equals(s)&&!"success".equals(s)){
                 condition.put(s,temp.get(s));
             }
         }
@@ -58,6 +58,9 @@ public class FindCollectionTaskByPageServlet extends HttpServlet {
             request.setAttribute("filter","time");
         }
         request.setAttribute("condition",condition);
+        System.out.println(request.getParameter("success"));
+        request.setAttribute("success",request.getParameter("success"));
+
         request.getRequestDispatcher("/teamTask.jsp?all="+all).forward(request,response);
 
     }

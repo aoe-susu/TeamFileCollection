@@ -116,4 +116,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
 
         return pb;
     }
+    public List<CollectionTask> getCollectionTaskListByTeamId(int teamId) throws SQLException {
+        return dao.getCollectionTaskListByTeamId(teamId);
+    }
 }

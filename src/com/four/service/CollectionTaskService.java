@@ -56,4 +56,6 @@ public interface CollectionTaskService {
     PageBean<CollectionTask> findCollectionTaskByPage(String currentPage, String rows, Map<String, String[]> condition) throws SQLException;
 
     PageBean<CollectionTask> findCollectionTaskByPageAfterTime(String currentPage, String rows, Map<String, String[]> condition, Date date) throws SQLException;
+
+    public List<CollectionTask> getCollectionTaskListByTeamId(int teamId) throws SQLException;
 }
