@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>无标题文档</title>
@@ -59,18 +60,17 @@
         });
 
         $(document).ready(function () {
-
-            $(".click").click(function () {
-                var name = $(this).attr('name');
-                $(".tip").fadeIn(200, function () {
-                    $("[name='tipbtn_t']").click(function () {
-                        return true;
-                    });
-                    $("[name='tipbtn_f']").click(function () {
-                        return false;
-                    });
-                });
-            });
+            /* $(".click").click(function () {
+                 var name = $(this).attr('name');
+                 $(".tip").fadeIn(200, function () {
+                     $("[name='tipbtn_t']").click(function () {
+                         return true;
+                     });
+                     $("[name='tipbtn_f']").click(function () {
+                         return false;
+                     });
+                 });
+             });*/
 
             $(".tiptop a").click(function () {
                 $(".tip").fadeOut(200);
@@ -85,6 +85,51 @@
             $(".cancel").click(function () {
                 $(".tip").fadeOut(100);
                 $(".tip1").fadeOut(100);
+            });
+
+            /* $(".click").on('click', 'li[name="add"]', function () {
+                 if(name=="add"){
+                            $.ajax({
+                                url: "getform.do",
+                                data: {},
+                                async: true
+                            });
+                            alert("-------------------------------------------");
+                        }
+                        if(name=="update"){
+                            var checkID = [];
+                            $("input[name='checkbox']:checked").each(function (i) {
+                                checkID[i] = $(this).parent("tr").find("td[name='id']").val();
+                            });
+                            var id =checkID[0];
+                            $.ajax({
+                                url: "getform.do?id="+id,
+                                data: {},
+                                async: true
+                            });
+
+                        }
+             });*/
+
+            $(".toolbar").on('click', 'li[name="add"]', function () {
+                alert("--------");
+                $.ajax({
+                    url: "getform.do",
+                    type: "POST",
+                    async: true,
+                    success: function (data) {
+                        alert("-----------" + data);
+                        if (true == data) {
+                            window.location.href = "form.html";
+                        } else {
+                            window.location.href = "form.html";
+                        }
+                    }
+                });
+
+            })
+            $(".toolbar").on('click', 'li[name="update"]', function () {
+
             });
 
             $(".tablelist").on('click', "a[name='tablelink']", function () {
@@ -121,40 +166,41 @@
                                     '            <td name="id">' + id + '</td>\n' +
                                     '            <td name="number">' + number + '</td>\n' +
                                     '            <td name="name">' + name + '</td>\n' +
-                                    '            <td><img style="width:35px;height=20px;" src="'+iconUrl+'"/></td>\n' +
+                                    '            <td><img style="width:35px;height=20px;" src="' + iconUrl + '"/></td>\n' +
                                     '\n' +
                                     '        </tr>';
                             }
                             $("#team_member").append(strs);
                         } else {
-                            $("#team_member").append(' <tr> ' +'该团队还没有成员!' + ' </tr>');
+                            $("#team_member").append(' <tr> <td>' + '该团队还没有成员!' + '</td></tr>');
                         }
                         $(".tip1").fadeIn(200);
                     }
                 });
             });
 
-            $(".tablelist").on('click', "a[name='delete']", function (){
+            $(".tablelist").on('click', "a[name='delete']", function () {
                 var id = $(this).parents("tr").find("[name='id']").text();
-
-                if($(".tip").fadeIn(200)){
-                    $.ajax({
-                        url: "deleteTeamMember.do?id=" + id,
-                        data: {},
-                        type: "POST",
-                        async: true,
-                        dataType: "JSON",
-                        success: function (data) {
-                            alert(data+"--------data---------");
-                            if($(".tip").fadeIn(200)){
-                                var parent = $(this).parents("tbody");
-                                var t=$(this).parent().parent("tr").remove();
+                $(".tip").fadeIn(200, function () {
+                    $("[name='tipbtn_t']").click(function () {
+                        $.ajax({
+                            url: "deleteTeamMember.do?id=" + id,
+                            data: {},
+                            type: "POST",
+                            async: true,
+                            dataType: "JSON",
+                            success: function (data) {
+                                alert(data + "--------data---------");
+                                //var parent = $(this).parents("tr");
+                                $(this).parent().parent().remove();
+                                var t = $(this).parent("tr").remove();
                             }
-                        }
+                        });
                     });
-                }
-
+                });
+                $(this).parent().parent().remove();
             });
+
         });
 
     </script>
@@ -175,7 +221,7 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click" name="add"><span><img src="images/t01.png"/></span>添加</li>
+            <li class="click" name="add"><span name="add1"><img src="images/t01.png"/></span>添加</li>
             <li class="click" name="update"><span><img src="images/t02.png"/></span>修改</li>
             <li><span><img src="images/t03.png"/></span>删除</li>
             <li><span><img src="images/t04.png"/></span>统计</li>
@@ -190,7 +236,7 @@
     <table class="tablelist">
         <thead>
         <tr>
-            <th><input name="" type="checkbox" value="" checked="checked"/></th>
+            <th><input name="" type="checkbox" value="" checked=""/></th>
             <th>编号<i class="sort"><img src="images/px.gif"/></i></th>
             <th>账号</th>
             <th>团队名</th>
@@ -308,15 +354,15 @@
         <div class="message">共<i id="count" class="blue">1256</i>条记录，当前显示第&nbsp;<i id="currentPage" class="blue">1</i>页
         </div>
         <ul class="paginList">
-            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
-            <li class="paginItem current"><a href="javascript:;">1</a></li>
-            <li class="paginItem "><a href="javascript:;">2</a></li>
-            <li class="paginItem"><a href="javascript:;">3</a></li>
-            <li class="paginItem"><a href="javascript:;">4</a></li>
-            <li class="paginItem"><a href="javascript:;">5</a></li>
-            <li class="paginItem more"><a href="javascript:;">...</a></li>
-            <li class="paginItem"><a href="javascript:;">10</a></li>
-            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+            <li class="paginItem"><a href="showTeamServlet.do?page="+$('.current').children('a').text()><span class="pagepre"></span></a></li>
+            <li id="one" class="paginItem current"><a href="javascript:;">1</a></li>
+            <li id="two" class="paginItem "><a href="javascript:;">2</a></li>
+            <li id="three" class="paginItem"><a href="javascript:;">3</a></li>
+            <li id="four" class="paginItem"><a href="javascript:;">4</a></li>
+            <li id="five" class="paginItem"><a href="javascript:;">5</a></li>
+            <li id="six" class="paginItem more"><a href="javascript:;">...</a></li>
+            <li id="seven" class="paginItem"><a href="javascript:;">10</a></li>
+            <li id="eight" class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
         </ul>
     </div>
 
@@ -339,19 +385,19 @@
     <div class="tip1" id="list">
         <div class="tiptop"><span>团队中成员信息</span><a></a></div>
         <div class="tipinfo1">
-        <table class="tablelist">
-            <thead>
+            <table class="tablelist">
+                <thead>
                 <tr>
                     <th>编号<i class="sort"><img src="images/px.gif"/></i></th>
                     <th>账号</th>
-                    <th>团队名</th>
+                    <th>队员名称</th>
                     <th>图标地址</th>
                 </tr>
-            </thead>
-            <tbody id="team_member">
-            </tbody>
-            <tfoot></tfoot>
-        </table>
+                </thead>
+                <tbody id="team_member">
+                </tbody>
+                <tfoot></tfoot>
+            </table>
         </div>
         <div class="tipbtn">
             <input name="tipbtn_t" type="button" class="sure" value="确定"/>

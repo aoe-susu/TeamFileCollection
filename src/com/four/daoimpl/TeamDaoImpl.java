@@ -1,6 +1,7 @@
 package com.four.daoimpl;
 
 import com.four.dao.TeamDao;
+import com.four.entity.PageBean;
 import com.four.entity.Team;
 import com.four.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -11,6 +12,7 @@ import sun.plugin2.main.server.ResultHandler;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -69,8 +71,30 @@ public class TeamDaoImpl implements TeamDao {
     }
 
     @Override
-    public int addTeam(Team team) {
+    public int countTeam(PageBean bean) {
+        String sql = "select count(*) from team ";
+        try {
+            int num = Integer.parseInt(queryRunner.query(sql,new ScalarHandler<Integer>()).toString());
+            bean.setTotalSize(num);
+            return num;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return 0;
+    }
+
+    @Override
+    public int addTeam(Team team) {
+        String sql = "insert into team(id,account,name,password,introduction,iconUrl) values(?,?,?,?,?,?)";
+        Object[] params = {team.getId(),team.getAccount(), team.getName(), team.getPassword(), team.getIntroduction(),team.getIconUrl()};
+        int num =0;
+        try {
+            BigInteger big = queryRunner.insert(sql,new ScalarHandler<>(),params);
+            num = Integer.parseInt(big.toString());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return num;
     }
 
     @Override
@@ -93,5 +117,20 @@ public class TeamDaoImpl implements TeamDao {
     @Override
     public int modefyBaseInfoById(int id, Team team) {
         return 0;
+    }
+
+    @Override
+    public PageBean getPageTeam(PageBean bean)  {
+        int size = bean.getSIZE();
+        int currentPage = bean.getCurrentPage();
+        String sql ="select* from team limit ?,?";
+        try {
+           List<Team> team = (List<Team>) queryRunner.query(sql,new BeanListHandler(Team.class),new Object[]{(currentPage-1)*size,size});
+           bean.setTeamList(team);
+           return bean;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return bean;
     }
 }

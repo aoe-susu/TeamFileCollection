@@ -36,4 +36,9 @@ public class ManagerServiceImpl implements ManagerService {
         return Math.max(num,number);
     }
 
+    @Override
+    public int insertTeam(Team team) {
+        return teamDao.addTeam(team);
+    }
+
 }

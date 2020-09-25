@@ -49,6 +49,20 @@
                     $("#imgteam").append(strs);
                 }
             });
+            $.ajax({
+                url: "getTotalCount.do",
+                data: {},
+                type: "POST",
+                scriptCharset: 'utf-8',
+                success: function (data) {
+                    // alert(data + "--------------count-----");
+                    $("#count").val(data);
+                    $("#count").innerHTML = data;
+                    $("#count").innerText = data;
+
+                }
+            });
+
         });
 
        /* $(function () {

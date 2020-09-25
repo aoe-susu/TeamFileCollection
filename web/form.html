@@ -1,38 +1,171 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
-	<div class="place">
+<div class="place">
     <span>位置：</span>
     <ul class="placeul">
-    <li><a href="#">首页</a></li>
-    <li><a href="#">表单</a></li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">表单</a></li>
     </ul>
-    </div>
-    
-    <div class="formbody">
-    
+</div>
+
+<div class="formbody">
+
     <div class="formtitle"><span>基本信息</span></div>
-    
-    <ul class="forminfo">
-    <li><label>文章标题</label><input name="" type="text" class="dfinput" /><i>标题不能超过30个字符</i></li>
-    <li><label>关键字</label><input name="" type="text" class="dfinput" /><i>多个关键字用,隔开</i></li>
-    <li><label>是否审核</label><cite><input name="" type="radio" value="" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="radio" value="" />否</cite></li>
-    <li><label>引用地址</label><input name="" type="text" class="dfinput" value="http://www.uimaker.com/uimakerhtml/uidesign/" /></li>
-    <li><label>文章内容</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
-    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/></li>
-    </ul>
-    
-    
-    </div>
+    <form method="post" id="file" action="" enctype="multipart/form-data">
+        <ul class="forminfo">
+            <li><label>编号</label><input name="number" type="text" class="dfinput"/><i>编号不能超过30个字符,只能为数字</i></li>
+            <li><label>账号</label><input name="account" type="text" class="dfinput"/><i>请创建一个独一无二的账号</i></li>
+            <li><label>团队名称</label><input name="team_name" type="text" class="dfinput"/><i>请创建一个专属团队名称</i></li>
+            <li><label>审核</label><cite><input name="check" type="radio" value="yes"
+                                              checked="checked"/>是&nbsp;&nbsp<input name="check" type="radio"
+                                                                                    value="no"/>否</cite>
+            </li>
+            <li><label>图标地址</label>
+                <input id="test-image-file" name="iurl" type="file"
+                       class="dfinput" value="img/**.*"
+                       accept="image/gif, image/jpeg, image/png, image/jpg"/>
+            </li>
+            <li><label>团队简介</label><textarea name="introduce" cols="" rows="" class="textinput"></textarea></li>
+            <li><label>&nbsp;</label><input id="test-file-save" name="save" type="button" class="btn" value="确认保存"
+                                            onclick="UpladFile"/></li>
+        </ul>
+    </form>
+</div>
 
+<!-- <input type="file" name="image-file" id="test-image-file">
+ <button onclick="UpladFile()" name="file1">上传文件</button>
+-->
+<script type="text/javascript" src="js/jquery1.js"></script>
 
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript">
+
+    /*   var fileInput = document.getElementById('test-image-file'),
+           save = document.getElementById('test-file-save');
+   */
+    // preview = document.getElementById('test-image-preview');
+    // 监听change事件:
+
+    /*  fileInput.addEventListener('change', function() {
+          // 清除背景图片:
+          preview.style.backgroundImage = '';
+          // 检查文件是否选择:
+          if (!fileInput.value) {
+              info.innerHTML = '没有选择文件';
+              return;
+          }
+          // 获取File引用:
+          var file = fileInput.files[0];
+          //判断文件大小
+          var size = file.size;
+          if (size >= 1 * 1024 * 1024) {
+              alert('文件大于1兆不行!');
+              return false;
+          }
+          // 获取File信息:
+          info.innerHTML = '文件: ' + file.name + '<br>' +
+              '大小: ' + file.size + '<br>' +
+              '修改: ' + file.lastModifiedDate;
+          if (file.type !== 'image/jpeg' && file.type !== 'image/png' && file.type !== 'image/gif') {
+              alert('不是有效的图片文件!');
+              return;
+              // 读取文件:
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  var
+                      data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...}'
+                  preview.style.backgroundImage = 'url(' + data + ')';
+              };
+              // 以DataURL的形式读取文件:
+              reader.readAsDataURL(file);
+              console.log(file);
+          }
+      });*/
+
+    $(".btn").click(function () {
+        alert($("textarea[name='introduce']").val());
+        UpladFile();
+    });
+
+    /*  function uploadFile() {
+
+        var formData = new FormData();
+        var file = document.getElementById("test-image-file").files[0];
+        formData.append("file", file);
+        formData.append("fileName", fileName);
+        formData.append("fileSize", fileSize);
+
+        // 省略掉了success和error的处理
+        sendFile("addTeam.do", formData, true, function (res) {
+        }, function (XMLHttpRequest, textStatus, errorThrown) {
+            if (textStatus == true) {
+                console.log("success--------");
+            }
+        });
+    }
+*/
+    function UpladFile() {
+
+        var fileObj = document.getElementById("test-image-file").files[0]; // 获取文件对象
+
+        var FileController = "addTeam.do";                    // 接收上传文件的后台地址
+        // FormData 对象
+
+        var form = new FormData();
+
+        form.append("number", $("input[name='number']").val());// 可以增加表单数据
+        form.append("account", $("input[name='account']").val());// 可以增加表单数据
+        form.append("team_name", $("input[name='team_name']").val());// 可以增加表单数据
+        form.append("check", $("input[name='check']:checked").val());// 可以增加表单数据
+        form.append("introduce", $("textarea[name='introduce']").val());// 可以增加表单数据
+        form.append("file", fileObj);                     // 文件对象
+
+        // XMLHttpRequest 对象
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open("post", FileController, true);
+
+        xhr.onload = function () {
+            alert("上传完成!");
+            window.location.href="right.html";
+        };
+        xhr.send(form);
+
+    }
+
+    /* function sendFile(_url, _data, _async, _successCallback, _errorCallback) {
+
+         $.ajax({
+             type: "post",
+             async: _async,
+             url: _url,
+             dataType: 'json',
+             // 告诉jQuery不要去处理发送的数据
+             processData: false,
+             // 告诉jQuery不要去设置Content-Type请求头
+             contentType: false,
+             data: _data,
+             success: function (msg) {
+                 _successCallback(msg);
+             },
+             error: function (error) {
+                 _errorCallback(error);
+             }
+         });
+     }
+ */
+</script>
 </body>
 
 </html>

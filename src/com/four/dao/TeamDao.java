@@ -1,5 +1,6 @@
 package com.four.dao;
 
+import com.four.entity.PageBean;
 import com.four.entity.Team;
 import com.four.entity.TeamMember;
 
@@ -27,4 +28,6 @@ public interface TeamDao {
 
     public int modefyBaseInfoById(int id, Team team);//只会修改名称 简介 以及 图标地址
 
+    public int countTeam(PageBean bean);
+    public PageBean getPageTeam(PageBean bean);
 }

@@ -11,4 +11,6 @@ public interface ManagerService {
     List<TeamMember> getTeamMembers(int id);
 
     int deleteTeamMembers(int parseInt);
+    int insertTeam(Team team);
+
 }
