@@ -9,7 +9,9 @@ import java.util.List;
 public interface TeamDao {
 
     public List<Team> getTeams();
+
     public int getTotalCounts();
+
     public Team getTeamById(int id);//通过id获取团队
 
     public Team getTeamByName(String name);//通过名字获取团队
@@ -29,5 +31,7 @@ public interface TeamDao {
     public int modefyBaseInfoById(int id, Team team);//只会修改名称 简介 以及 图标地址
 
     public int countTeam(PageBean bean);
+
     public PageBean getPageTeam(PageBean bean);
+
 }
