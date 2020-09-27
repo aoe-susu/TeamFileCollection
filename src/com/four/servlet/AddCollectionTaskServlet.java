@@ -1,6 +1,7 @@
 package com.four.servlet;
 
 import com.four.entity.CollectionTask;
+import com.four.entity.Team;
 import com.four.service.CollectionTaskService;
 import com.four.serviceimpl.CollectionTaskServiceImpl;
 import com.mchange.v2.beans.BeansUtils;
@@ -62,6 +63,8 @@ public class AddCollectionTaskServlet extends HttpServlet {
 
         CollectionTaskService service=new CollectionTaskServiceImpl();
         try {
+            Team team=(Team)request.getSession().getAttribute("team");
+            task.setTeamId(team.getId());
             service.addTask(task);
         } catch (SQLException e) {
             e.printStackTrace();

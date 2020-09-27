@@ -2,6 +2,7 @@ package com.four.servlet;
 
 import com.four.entity.CollectionTask;
 import com.four.entity.PageBean;
+import com.four.entity.Team;
 import com.four.service.CollectionTaskService;
 import com.four.serviceimpl.CollectionTaskServiceImpl;
 
@@ -40,11 +41,12 @@ public class FindCollectionTaskByPageServlet extends HttpServlet {
         CollectionTaskService service=new CollectionTaskServiceImpl();
         PageBean<CollectionTask> pb= null;
         try {
+            Team team=(Team)request.getSession().getAttribute("team");
             if("true".equals(all)){
-                pb = service.findCollectionTaskByPage(currentPage, rows, condition);
+                pb = service.findCollectionTaskByPage(team.getId(),currentPage, rows, condition);
             }
             else{
-                pb = service.findCollectionTaskByPageAfterTime(currentPage,rows,condition,new Date());
+                pb = service.findCollectionTaskByPageAfterTime(team.getId(),currentPage,rows,condition,new Date());
             }
 
         } catch (SQLException e) {
@@ -52,17 +54,15 @@ public class FindCollectionTaskByPageServlet extends HttpServlet {
         }
         request.setAttribute("pb",pb);
         if("true".equals(all)){
-            request.setAttribute("filter",null);
+            request.setAttribute("ft",null);
         }
        else{
-            request.setAttribute("filter","time");
+            request.setAttribute("ft","time");
         }
         request.setAttribute("condition",condition);
         System.out.println(request.getParameter("success"));
-        request.setAttribute("success",request.getParameter("success"));
-
+        request.setAttribute("msg",request.getParameter("success"));
         request.getRequestDispatcher("/teamTask.jsp?all="+all).forward(request,response);
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

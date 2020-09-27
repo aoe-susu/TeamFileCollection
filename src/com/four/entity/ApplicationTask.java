@@ -3,7 +3,8 @@ package com.four.entity;
 import java.util.Date;
 
 public class ApplicationTask {
-    private int id;
+    private int memberId;
+    private int taskId;
     private String number;
     private String name;
     private Date date;
@@ -11,13 +12,31 @@ public class ApplicationTask {
     private int isNot;
 
     public ApplicationTask() {}
-    public ApplicationTask(int id, String number, String name, Date date, String up, int isNot) {
-        this.id = id;
+
+    public ApplicationTask(int memberId, int taskId, String number, String name, Date date, String up, int isNot) {
+        this.memberId = memberId;
+        this.taskId = taskId;
         this.number = number;
         this.name = name;
         this.date = date;
         this.up = up;
         this.isNot = isNot;
+    }
+
+    public int getMemberId() {
+        return memberId;
+    }
+
+    public void setMemberId(int memberId) {
+        this.memberId = memberId;
+    }
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
     }
 
     public String getNumber() {
@@ -60,18 +79,11 @@ public class ApplicationTask {
         this.isNot = isNot;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public String toString() {
         return "ApplicationTask{" +
-                "id=" + id +
+                "memberId=" + memberId +
+                ", taskId=" + taskId +
                 ", number='" + number + '\'' +
                 ", name='" + name + '\'' +
                 ", date=" + date +

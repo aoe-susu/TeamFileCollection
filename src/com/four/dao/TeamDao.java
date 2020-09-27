@@ -14,11 +14,18 @@ public interface TeamDao {
 
     public Boolean existTeamAccountAndPassword(String account, String password);//用于登录
 
+    public String getPasswordById(int id);//通过id获取密码，用于修改密码
+
     public int addTeam(Team team); //返回值>0表示插入成功
 
     public int deleteTeamById(int id);//返回值>0表示删除成功
 
-    public int modefyPasswordById(int id, String password);//通过id修改密码
+    public int modifyPasswordById(int id, String password);//通过id修改密码
 
-    public int modefyBaseInfoById(int id, Team team);//只会修改名称 简介 以及 图标地址
+    public int modifyNameById(int id, String Name);//通过id修改名称
+
+    public int modifyIntroductionById(int id, String introduction);//通过id修改简介
+
+    public int modifyIconUrlById(int id, String iconUrl);//通过id修改图标地址
+
 }

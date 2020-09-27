@@ -8,6 +8,10 @@ public class Team {
     private String introduction;
     private String iconUrl;
 
+    public Team(){}
+
+
+
     public int getId() {
         return id;
     }
@@ -54,5 +58,17 @@ public class Team {
 
     public void setIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", introduction='" + introduction + '\'' +
+                ", iconUrl='" + iconUrl + '\'' +
+                '}';
     }
 }

@@ -2,6 +2,7 @@ package com.four.dao;
 
 import com.four.entity.Application;
 import com.four.entity.TaskFile;
+import com.four.entity.TeamMember;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -18,7 +19,9 @@ public interface ApplicationDao {
 
     public List<Application> getApplicationList() throws SQLException;
 
-    public List<TaskFile> getApplication(int teamId) throws SQLException;
+    //public List<TaskFile> getApplication(int teamId) throws SQLException;
+
+    public Application getApplication(int applicationId) ;
 
     public List<TaskFile> getTimeByMemberId(int memId) throws SQLException;
 
@@ -27,4 +30,9 @@ public interface ApplicationDao {
     public int getTotalCount(int teamId) throws SQLException;
 
     public int getUpCount(int teamId) throws SQLException;
+
+    public List<Application> getApplyApplicationListByteamId(int teamId) throws SQLException;
+
+    public Boolean existApplicationNumber(String num);
+
 }

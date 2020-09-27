@@ -2,6 +2,7 @@ package com.four.dao;
 
 import com.four.entity.TaskFile;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface TaskFileDao {
@@ -16,9 +17,15 @@ public interface TaskFileDao {
 
     public List<TaskFile> getTaskFileListByTaskId(int taskId);//通过任务id获取任务文件列表
 
-    public String modifyAddressById(int memberId);
+    public String getAddressById(int memberId,int taskId);
 
     public boolean check(int id);
 
     public int modifyFileAddressById(TaskFile taskFile);
+
+    int getTaskFileCount(int taskId);
+
+    List<TaskFile> getTimeByMemberId(int memId);
+
+    List<TaskFile> getTaskFile(int taskId) throws SQLException;
 }

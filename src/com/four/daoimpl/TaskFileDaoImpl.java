@@ -5,9 +5,11 @@ import com.four.entity.TaskFile;
 import com.four.utils.JDBCUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class TaskFileDaoImpl implements TaskFileDao {
@@ -27,11 +29,11 @@ public class TaskFileDaoImpl implements TaskFileDao {
     }
 
     @Override
-    public String modifyAddressById(int memberId) {
-        String sql = "select address from task_file where memberId=?";
+    public String getAddressById(int memberId,int taskId) {
+        String sql = "select address from task_file where memberId=? and taskId=?";
         String result = null;
         try {
-            result = queryRunner.query(sql,new ScalarHandler<String>(),memberId);
+            result = queryRunner.query(sql,new ScalarHandler<String>(),memberId,taskId);
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -65,6 +67,34 @@ public class TaskFileDaoImpl implements TaskFileDao {
             e.printStackTrace();
         }
         return result;
+    }
+
+    @Override
+    public int getTaskFileCount(int taskId) {
+        String sql = "select count(*) from task_file where taskId=?";
+        long result = 0;
+        try {
+            result = queryRunner.query(sql,new ScalarHandler<Long>(),taskId);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return (int)result;
+    }
+
+    @Override
+    public List<TaskFile> getTimeByMemberId(int memId) {
+        return null;
+    }
+
+    @Override
+    public List<TaskFile> getTaskFile(int taskId) throws SQLException {
+        String sql = "select * from task_file where taskId=?";
+        List<TaskFile> list = queryRunner.query(sql,new BeanListHandler<TaskFile>(TaskFile.class),taskId);
+        if (list.size()>0){
+            return list;
+        }else {
+            return new ArrayList<>();
+        }
     }
 
     @Override

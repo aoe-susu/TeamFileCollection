@@ -2,6 +2,7 @@ package com.four.servlet;
 
 import com.four.entity.CollectionTask;
 import com.four.entity.PageBean;
+import com.four.entity.Team;
 import com.four.service.CollectionTaskService;
 import com.four.serviceimpl.CollectionTaskServiceImpl;
 
@@ -33,7 +34,8 @@ public class FindCollectionTaskByPageAfterTimeServlet extends HttpServlet {
         CollectionTaskService service=new CollectionTaskServiceImpl();
         PageBean<CollectionTask> pb= null;
         try {
-            pb = service.findCollectionTaskByPageAfterTime(currentPage,rows,condition,new Date());
+            Team team=(Team)request.getSession().getAttribute("team");
+            pb = service.findCollectionTaskByPageAfterTime(team.getId(),currentPage,rows,condition,new Date());
         } catch (SQLException e) {
             e.printStackTrace();
         }

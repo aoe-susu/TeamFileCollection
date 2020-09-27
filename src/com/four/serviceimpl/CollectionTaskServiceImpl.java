@@ -51,7 +51,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
     }
 
     @Override
-    public PageBean<CollectionTask> findCollectionTaskByPage(String _currentPage, String _rows, Map<String, String[]> condition) throws SQLException {
+    public PageBean<CollectionTask> findCollectionTaskByPage(int teamId,String _currentPage, String _rows, Map<String, String[]> condition) throws SQLException {
 
         int currentPage=Integer.parseInt(_currentPage);
         int rows=Integer.parseInt(_rows);
@@ -59,7 +59,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
         if(currentPage<=0){
             currentPage=1;
         }
-        int totalCount=dao.findTotalCount(condition);
+        int totalCount=dao.findTotalCount(teamId,condition);
         int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
         if(currentPage>totalPage) currentPage=totalPage;
         //创建空的PageBean对象
@@ -74,7 +74,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
 
         //调用dao查询List集合
         int start=(currentPage-1)*rows;
-        List<CollectionTask> list=dao.findByPage(start,rows,condition);
+        List<CollectionTask> list=dao.findByPage(teamId,start,rows,condition);
         pb.setList(list);
 
         //计算总页码
@@ -85,14 +85,14 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
     }
 
     @Override
-    public PageBean<CollectionTask> findCollectionTaskByPageAfterTime(String _currentPage, String _rows, Map<String, String[]> condition, Date date) throws SQLException {
+    public PageBean<CollectionTask> findCollectionTaskByPageAfterTime(int teamId,String _currentPage, String _rows, Map<String, String[]> condition, Date date) throws SQLException {
         int currentPage=Integer.parseInt(_currentPage);
         int rows=Integer.parseInt(_rows);
 
         if(currentPage<=0){
             currentPage=1;
         }
-        int totalCount=dao.findTotalCountAfterTime(condition,date);
+        int totalCount=dao.findTotalCountAfterTime(teamId,condition,date);
         int totalPage=(totalCount % rows) ==0 ? totalCount/rows : (totalCount/rows) + 1;
         if(currentPage>totalPage) currentPage=totalPage;
         //创建空的PageBean对象
@@ -107,7 +107,7 @@ public class CollectionTaskServiceImpl implements CollectionTaskService {
 
         //调用dao查询List集合
         int start=(currentPage-1)*rows;
-        List<CollectionTask> list=dao.getCollectionTaskListByTeamIdAfterTime(start,rows,condition,date);
+        List<CollectionTask> list=dao.getCollectionTaskListByTeamIdAfterTime(teamId,start,rows,condition,date);
         pb.setList(list);
 
         //计算总页码

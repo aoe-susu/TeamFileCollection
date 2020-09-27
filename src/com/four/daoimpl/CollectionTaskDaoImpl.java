@@ -22,7 +22,7 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     @Override
     public void addCollectionTask(CollectionTask task) throws SQLException {
         String sql="insert into collection_task values(null,?,?,?,?)";
-        queryRunner.update(sql,task.getTitle(),task.getContent(),2,task.getDeadline());
+        queryRunner.update(sql,task.getTitle(),task.getContent(),task.getTeamId(),task.getDeadline());
 
     }
 
@@ -62,8 +62,8 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     }
 
     @Override
-    public List<CollectionTask> getCollectionTaskListByTeamIdAfterTime(int start, int rows, Map<String, String[]> condition, Date dateTime) throws SQLException {
-        String sql="select * from collection_task where teamId=2 and TO_DAYS(?)<TO_DAYS(deadline)";
+    public List<CollectionTask> getCollectionTaskListByTeamIdAfterTime(int teamId,int start, int rows, Map<String, String[]> condition, Date dateTime) throws SQLException {
+        String sql="select * from collection_task where teamId=? and TO_DAYS(?)<TO_DAYS(deadline)  order by deadline desc ";
         StringBuilder sb = new StringBuilder(sql);
         Set<String> keySet = condition.keySet();
         List<Object> params=new ArrayList<Object>();
@@ -84,6 +84,7 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
         //添加分页查询
         sb.append(" limit ?,? ");
         //添加分页查询参数值
+        params.add(teamId);
         params.add(dateTime);
         params.add(start);
         params.add(rows);
@@ -95,11 +96,12 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     }
 
     @Override
-    public int findTotalCount(Map<String, String[]> condition) throws SQLException {
-        String sql="select count(*) from collection_task where teamId=2";
+    public int findTotalCount(int teamId,Map<String, String[]> condition) throws SQLException {
+        String sql="select count(*) from collection_task where teamId=?";
         StringBuilder sb = new StringBuilder(sql);
         Set<String> keySet = condition.keySet();
         List<Object> params=new ArrayList<Object>();
+        params.add(teamId);
         for (String key : keySet) {
 
             //排除分页条件参数
@@ -118,11 +120,12 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     }
 
     @Override
-    public int findTotalCountAfterTime(Map<String, String[]> condition,Date date) throws SQLException {
-        String sql="select count(*) from collection_task where teamId=2 and TO_DAYS(?)<TO_DAYS(deadline) ";
+    public int findTotalCountAfterTime(int teamId, Map<String, String[]> condition,Date date) throws SQLException {
+        String sql="select count(*) from collection_task where teamId=? and TO_DAYS(?)<TO_DAYS(deadline) ";
         StringBuilder sb = new StringBuilder(sql);
         Set<String> keySet = condition.keySet();
         List<Object> params=new ArrayList<Object>();
+        params.add(teamId);
         params.add(date);
         for (String key : keySet) {
 
@@ -142,11 +145,12 @@ public class CollectionTaskDaoImpl implements CollectionTaskDao {
     }
 
     @Override
-    public List<CollectionTask> findByPage(int start, int rows, Map<String, String[]> condition) throws SQLException {
-        String sql="select * from collection_task where teamId=2 ";
+    public List<CollectionTask> findByPage(int teamId,int start, int rows, Map<String, String[]> condition) throws SQLException {
+        String sql="select * from collection_task where teamId=? order by deadline desc ";
         StringBuilder sb = new StringBuilder(sql);
         Set<String> keySet = condition.keySet();
         List<Object> params=new ArrayList<Object>();
+        params.add(teamId);
         for (String key : keySet) {
 
             //排除分页条件参数
